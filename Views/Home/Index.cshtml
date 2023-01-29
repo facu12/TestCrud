@@ -1,0 +1,24 @@
+﻿@using TestCrud.Areas.Identity.Data;
+@model User
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@if (Model.isAdmin == true)
+{
+    <div>
+        <h2>Welcome to the admin panel</h2>
+        <a class="btn btn-primary text-white" 
+           asp-controller="Admin" 
+           asp-action="Index">
+            Go to User Panel Administration
+        </a>
+    </div>
+}
+else
+{
+    <div class="text-center">
+        <h1 class="display-4">Bienvenido Visitante!</h1>
+    </div>
+}
+
